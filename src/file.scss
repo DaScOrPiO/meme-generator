@@ -1,0 +1,200 @@
+* {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+$primary-color: #81a23c;
+$light-color: #dadada;
+
+@mixin flexed {
+  display: flex;
+}
+
+@mixin text-gradiend {
+  background: linear-gradient(
+    139deg,
+    rgba(4, 4, 4, 0.47) 18%,
+    #737373 49%,
+    #ffffff 76%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin main-gradient {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(4, 4, 4, 0.47) 20%, #81a23c 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: 20vh;
+  @include flexed();
+  background: linear-gradient(
+    255deg,
+    rgba(4, 4, 4, 0.47) 40%,
+    11%,
+    #9acd32 88%
+  );
+  padding: 0 10px;
+
+  .con {
+    @include flexed();
+    width: 100%;
+
+    .brand-name {
+      .text {
+        @include main-gradient();
+        @media screen and (max-width: 767px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.form--input {
+  width: 100%;
+  height: auto;
+  @include flexed();
+
+  .form-con {
+    @include flexed();
+
+    .top-text {
+      width: 40%;
+      padding: 1%;
+      text-align: center;
+    }
+    .bottom-text {
+      width: 40%;
+      padding: 1%;
+      text-align: center;
+    }
+  }
+  .btn-con {
+    @include flexed();
+    width: 100%;
+    button {
+      width: 100%;
+      background-color: $primary-color;
+      font-size: 1.2rem;
+      font-weight: 600;
+      .gradient-color {
+        @include text-gradiend();
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.generated-image {
+  width: 100%;
+  height: auto;
+  @include flexed();
+  position: relative;
+
+  .text {
+    font-size: 2rem;
+    color: $primary-color;
+    z-index: 2;
+  }
+
+  .top-text {
+    position: absolute;
+    top: 2%;
+  }
+
+  .bottom-text {
+    position: absolute;
+    bottom: 2%;
+  }
+}
+
+.footer {
+  background-color: #737373;
+  @include flexed();
+
+  .foot-con-1 {
+    @include flexed();
+    @media screen and (max-width: 767px) {
+      margin-top: 5%;
+    }
+  }
+
+  .foot-con-2 {
+    @include flexed();
+    .foot-links {
+      a {
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 8%;
+    }
+  }
+
+  .foot-con-3 {
+    @include flexed();
+    .foot-contact {
+      .submit {
+        background-color: $primary-color;
+        color: #ffffff;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 8%;
+    }
+  }
+
+  .copyright {
+    width: 100%;
+    @include flexed();
+    .text {
+      @include main-gradient();
+      font-size: 1.5rem;
+    }
+    @media screen and(max-width: 767px) {
+      margin-top: 8%;
+    }
+  }
+
+  .foot-img {
+    @include flexed();
+    img {
+      border-bottom: 2px solid #ffffff;
+    }
+  }
+
+  .logo-name {
+    .text {
+      @include main-gradient();
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+* {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  background: linear-gradient(255deg, rgba(4, 4, 4, 0.47) 40%, 11%, #9acd32 88%);
+  padding: 0 10px;
+}
+.header .con {
+  display: flex;
+  width: 100%;
+}
+.header .con .brand-name .text {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(4, 4, 4, 0.47) 20%, #81a23c 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 767px) {
+  .header .con .brand-name .text {
+    font-size: 1.5rem;
+  }
+}
+
+.form--input {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.form--input .form-con {
+  display: flex;
+}
+.form--input .form-con .top-text {
+  width: 40%;
+  padding: 1%;
+  text-align: center;
+}
+.form--input .form-con .bottom-text {
+  width: 40%;
+  padding: 1%;
+  text-align: center;
+}
+.form--input .btn-con {
+  display: flex;
+  width: 100%;
+}
+.form--input .btn-con button {
+  width: 100%;
+  background-color: #81a23c;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.form--input .btn-con button .gradient-color {
+  background: linear-gradient(139deg, rgba(4, 4, 4, 0.47) 18%, #737373 49%, #ffffff 76%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form--input .btn-con button:hover {
+  opacity: 0.8;
+}
+
+.generated-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+.generated-image .text {
+  font-size: 2rem;
+  color: #81a23c;
+  z-index: 2;
+}
+.generated-image .top-text {
+  position: absolute;
+  top: 2%;
+}
+.generated-image .bottom-text {
+  position: absolute;
+  bottom: 2%;
+}
+
+.footer {
+  background-color: #737373;
+  display: flex;
+}
+.footer .foot-con-1 {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .footer .foot-con-1 {
+    margin-top: 5%;
+  }
+}
+.footer .foot-con-2 {
+  display: flex;
+}
+.footer .foot-con-2 .foot-links a {
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.footer .foot-con-2 .foot-links a:hover {
+  color: black;
+}
+@media screen and (max-width: 767px) {
+  .footer .foot-con-2 {
+    margin-top: 8%;
+  }
+}
+.footer .foot-con-3 {
+  display: flex;
+}
+.footer .foot-con-3 .foot-contact .submit {
+  background-color: #81a23c;
+  color: #ffffff;
+}
+.footer .foot-con-3 .foot-contact .submit:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 767px) {
+  .footer .foot-con-3 {
+    margin-top: 8%;
+  }
+}
+.footer .copyright {
+  width: 100%;
+  display: flex;
+}
+.footer .copyright .text {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(4, 4, 4, 0.47) 20%, #81a23c 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .footer .copyright {
+    margin-top: 8%;
+  }
+}
+.footer .foot-img {
+  display: flex;
+}
+.footer .foot-img img {
+  border-bottom: 2px solid #ffffff;
+}
+.footer .logo-name .text {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(4, 4, 4, 0.47) 20%, #81a23c 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}/*# sourceMappingURL=file.css.map */
