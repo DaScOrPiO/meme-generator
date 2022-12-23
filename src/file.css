@@ -82,6 +82,37 @@ body {
   display: flex;
   position: relative;
 }
+.generated-image .err-msg {
+  width: 40%;
+  height: 200px;
+  background-color: #dadada;
+  color: red;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .generated-image .err-msg {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+}
+.generated-image .err-msg .icon-container {
+  width: 40%;
+  height: 100%;
+}
+.generated-image .err-msg .icon-container .icon {
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.generated-image .err-msg .text-1 {
+  width: 60%;
+}
 .generated-image .text {
   font-size: 2rem;
   color: #81a23c;

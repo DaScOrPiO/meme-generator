@@ -109,6 +109,39 @@ body {
   @include flexed();
   position: relative;
 
+  .err-msg {
+    width: 40%;
+    height: 200px;
+    background-color: $light-color;
+    color: red;
+    font-size: 1.2rem;
+    @include flexed();
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      font-size: 1rem;
+    }
+
+    .icon-container {
+      width: 40%;
+      height: 100%;
+
+      .icon {
+        width: 100%;
+        height: 100%;
+        color: black;
+        @include flexed();
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .text-1 {
+      width: 60%;
+    }
+  }
+
   .text {
     font-size: 2rem;
     color: $primary-color;

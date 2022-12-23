@@ -2,6 +2,8 @@
 import React from "react";
 import "../file.css";
 import { useState, useEffect } from "react";
+import axios from "axios";
+import Err from "./err";
 
 export default function Main() {
   const [Meme, setMeme] = useState({
@@ -10,16 +12,24 @@ export default function Main() {
     randomImages: "https://i.imgflip.com/1g8my4.jpg",
   });
 
+  const [Error, setError] = useState(false);
+
   const request = useEffect(() => {
-    fetch(`https://api.imgflip.com/get_memes`)
-      .then((res) => res.json())
-      .then((data) => setallMemeimage(data));
+    const memeFetch = async () => {
+      try {
+        const res = await axios.get(`https://api.imgflip.com/get_memes`);
+        setallMemeimage(res);
+      } catch (err) {
+        setError((prev) => prev = true);
+      }
+    };
+    memeFetch();
   }, []);
 
   const [allMemeImage, setallMemeimage] = useState(request);
 
   const getMemes = () => {
-    const memeArr = allMemeImage.data.memes;
+    const memeArr = allMemeImage.data.data.memes;
     const randNum = Math.floor(Math.random() * memeArr.length);
     const randImage = memeArr[randNum].url;
     setMeme((prevState) => ({ ...prevState, randomImages: randImage }));
@@ -78,6 +88,9 @@ export default function Main() {
         </div>
 
         <div className="generated-image align-items-center justify-content-center my-4">
+          {Error === true && <Err />}
+          {Error === false && 
+          <>
           <img
             className="img-fluid"
             src={Meme.randomImages}
@@ -86,6 +99,7 @@ export default function Main() {
           />
           <h3 className="text top-text">{Meme.topText}</h3>
           <h3 className="text bottom-text">{Meme.bottomText}</h3>
+          </>}
         </div>
       </main>
     </div>
